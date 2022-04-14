@@ -1,0 +1,150 @@
+:root{
+--borders-gray: #404040;
+--main-gray: #E8E8E8;
+
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+/*This bit is taken from the portfolio challenge, I really liked the concept of automaticaly resizing fonts.*/
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+/*Font Sizing*/
+header{
+  font-size: 4rem;
+  margin-top: 6rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+}
+h2{
+  font-size: 3rem;
+}
+main{
+  font-size: 2rem;
+}
+code{
+  font-size: 1.6rem;
+}
+
+body {
+  display: flex;
+  margin: 0;
+}
+nav a {
+  font-size: 1.8rem;
+}
+#Web-Title{
+  font-size: 2.5rem;
+}
+
+
+/*Section Styling*/
+main {
+  
+  max-height: 100vh;
+  margin-left: 15px;
+  taxt-align: justify;
+  overflow-y: scroll;
+}
+
+
+        /*NAVBAR*/
+/*This bit inspired in this Youtube video: https://www.youtube.com/watch?v=Nc7IWgXyFn0&ab_channel=FlorinPop   I studied his code an then tried to reach a similar result*/
+
+nav {
+  background-color: var(--main-gray);
+  border-right: 2px solid var(--borders-gray);
+  
+}
+nav header {
+  text-align: center;
+  border-bottom: 2px solid var(--borders-gray);
+  margin: auto;
+  padding: 2rem;
+    font-weight: bold;
+    
+}
+ 
+nav a{
+  width: 25rem;
+  text-decoration: none;
+  display: block;
+  color: black;
+  padding: 1.2rem 2rem;
+  border-bottom: 2px solid var(--borders-gray);
+  
+  
+}
+/*End of the snippet*/
+
+pre{
+  background-color: var(--main-gray);
+  border: 2px solid var(--borders-gray);
+  border-radius: 7px;
+  overflow: auto;
+  padding: 0 1rem;
+}
+
+/*This bit is also taken from the same Youtube vid*/
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  nav {
+    
+    border-right: none;
+    border-bottom: 2px solid #777;
+    height: 200px;
+    overflow-y:scroll;
+    max-width:100%;
+    text-align: center;
+    
+  }
+  nav header{
+    padding: 2rem 0;
+  }
+  nav a {
+    padding: 1rem 0;
+    width: 100%;
+ 
+  }
+  main {
+    height: auto;
+    width: 90%;
+   margin: auto;
+  }
+}
